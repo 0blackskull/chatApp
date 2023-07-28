@@ -34,13 +34,13 @@ header {
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 2.0 rem;
 }
 
 /* Reducing the size of the image in h1 tag to half */
 header img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 /* Sign-in and Sign-out button styles */
@@ -56,6 +56,12 @@ button {
 
 .sign-in {
   background-color: #4285F4;
+  margin-top: 5%;
+}
+
+.sign-in-parent {
+  margin-top: 5%;
+  text-align: center;
 }
 
 .sign-in:hover {
