@@ -1,0 +1,173 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+}
+
+/* App container styles */
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #404040;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Reducing the size of the image in h1 tag to half */
+header img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Sign-in and Sign-out button styles */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.sign-in {
+  background-color: #4285F4;
+}
+
+.sign-in:hover {
+  background-color: #357AE8;
+}
+
+.sign-out {
+  background-color: #DB4437;
+}
+
+.sign-out:hover {
+  background-color: #C43A30;
+}
+
+/* ChatRoom styles */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+/* Message styles */
+.message {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message p {
+  font-size: 1rem;
+}
+
+.message.sent {
+  justify-content: flex-end;
+  background-color: #4285F4;
+  color: #fff;
+  align-self: flex-end; /* Sent messages stick to the right */
+}
+
+.message.received {
+  justify-content: flex-start;
+  background-color: #f2f2f2;
+  color: #333;
+  align-self: flex-start; /* Received messages align with left boundaries of the app */
+}
+
+/* Chat input area styles */
+form {
+  display: flex;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  border: none;
+  background-color: #4285F4;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  background-color: #9E9E9E;
+  cursor: not-allowed;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  main {
+    max-height: 60vh;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .message img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .message p {
+    font-size: 0.9rem;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+}
