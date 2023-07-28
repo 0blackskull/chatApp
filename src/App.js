@@ -53,9 +53,10 @@ function SignIn() {
   }
 
   return (
-    <>
+    <div className="sign-in-parent">
+      <div><h1>Welcome to the Chatroom!</h1></div>
       <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-    </>
+    </div>
   )
 
 }
